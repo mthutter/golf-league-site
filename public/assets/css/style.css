@@ -1,8 +1,9 @@
 /** @format */
 
 body, html {
-  height: 100%;
-  background-image: url(/images/mountain-hole.webp);
+  height: 100vh;
+  width: 100vw;
+  background-image: url(/images/golf-hole-2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,8 +30,17 @@ body, html {
 .main-page {
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-start;
-  height: 100vh;
+  align-items: flex-start;  
+ }
+
+ .main-small {
+    max-height: 400px; 
+    border: solid rgb(40, 54, 13) 5px;
+ }
+
+ .main-large {
+    max-height: 480px; 
+    border: solid rgb(40, 54, 13) 5px;
  }
 
 footer {
