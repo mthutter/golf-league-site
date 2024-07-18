@@ -1,44 +1,47 @@
+/** @format */
 
-body {
- height: 100%;
- background-image: url(/images/mountain-hole.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;    
-    height: 100%;    
+body, html {
+  height: 100%;
+  background-image: url(/images/mountain-hole.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-html {
-    height: 100%;
-}
-
-.navbar-nav > li{
-    padding-left:20px;
-    padding-right:20px;
+.navbar-nav > li {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .navbar-brand {
-    padding-right: 60px;
+  padding-right: 60px;
 }
 
 .navbar {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    border: solid green 5px;
-    background-color: lightgreen; 
-    padding: 0px;
-    margin: 5px; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  border: solid green 5px;
+  background-color: lightgreen;  
+  margin: 10px;
+  padding: 5px;
+}
+
+.main-page {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
 }
 
 footer {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 a {
-    color:darkcyan;
-    text-decoration: none;
+  color: darkcyan;
+  text-decoration: none;
 }
 
 .carousel {
-    height: 400px;
+  height: 400px;
 }
