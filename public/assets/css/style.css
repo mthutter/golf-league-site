@@ -29,9 +29,9 @@ body, html {
 .main-page {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
-}
+ }
 
 footer {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
