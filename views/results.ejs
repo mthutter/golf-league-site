@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./layouts/header'); -%>
+<style>
+    a {
+        color: rgb(8, 70, 6);
+        font-size: larger; 
+        font-weight: bolder;
+    }
+
+</style>
+
+    <body>
+
+        <section>
+            <%- include('./layouts/navbar'); -%>
+        </section>
+
+        <section class="container" id="meat">
+            <div class="file-list">
+                <h2 style="color: rgb(9, 10, 9); font-weight: bold; text-decoration: underline;">Weekly Results</h2>
+                <br>
+                <a href="/results/Bottoms Up 2024 League Stats - Week 4.xlsx">Week 4 - Excel Workbook</a>
+                <a href="/results/Bottoms Up 2024 League Stats - Week 5.xlsx">Week 5 - Excel Workbook</a>
+                <a href="/results/Bottoms Up 2024 League Stats - Week 6.xlsx">Week 6 - Excel Workbook</a>
+                <a href="/results/Bottoms Up 2024 League Stats - Week 7.xlsx">Week 7 - Excel Workbook</a>
+                <a href="/results/Bottoms Up 2024 League Stats - Week 8.xlsx">Week 8 - Excel Workbook</a>
+                <a href="/results/Bottoms Up 2024 League Stats - Week 9.xlsx">Week 9 - Excel Workbook</a>
+                <a href="/results/Bottoms Up 2024 League Stats - Week 10.xlsx">Week 10 - Excel Workbook</a>
+                <a href="/results/Bottoms Up 2024 League Stats - Week 11.xlsx">Week 11 - Excel Workbook</a>
+            </div>
+        </section>
+
+        <section>
+            <%- include('./layouts/footer'); -%>
+        </section>
+
+        <section>
+            <%- include('./layouts/scripts'); -%>
+        </section>
+
+    </body>
+
+</html>
