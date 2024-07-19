@@ -8,6 +8,7 @@ const fileUpload = require("express-fileupload");
 
 const homeController = require("./controllers/home.js");
 const leaguesController = require("./controllers/leagues.js");
+const courseController = require("./controllers/course.js");
 const imagesController = require("./controllers/images.js");
 const contactsController = require("./controllers/contacts.js");
 const loginController = require("./controllers/login.js");
@@ -34,6 +35,7 @@ app.use(expressSession({ cookie: { maxAge: 60000 },
 
 app.get("/", homeController);
 app.get("/leagues", leaguesController);
+app.get("/course", courseController);
 app.get("/images", imagesController);
 app.get("/results", resultsController);
 app.get("/contacts", contactsController);
