@@ -30,13 +30,13 @@ margin-right: 10%;
 
  .main-small {
     max-height: 400px; 
-    border: solid rgb(40, 54, 13) 5px;
+    border: solid rgb(40, 54, 13) 3px;
     border-radius: 10%;
  }
 
  .main-large {
     max-height: 480px;
-    border: solid rgb(40, 54, 13) 5px;
+    border: solid rgb(40, 54, 13) 3px;
     border-radius: 5%;
  }
 
