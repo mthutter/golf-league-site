@@ -75,6 +75,11 @@ margin-right: 10%;
 
  footer {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
 }
 
 a {
