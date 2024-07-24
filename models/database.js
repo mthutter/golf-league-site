@@ -34,7 +34,7 @@ async function insertUserTableData(username,first,last,email,phone,password) {
     const result = await client.query("select * from golfleague.users");
     console.table(result.rows);
   } catch (error) {
-    console.error("Something bad happeneded during INSERT", error);
+    console.error("Something bad happened during INSERT", error);
   } finally {
     await client.end();
     console.log("Client disconnect after INSERT...");

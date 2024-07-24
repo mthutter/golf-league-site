@@ -1,10 +1,11 @@
 const express = require("express");
-const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const flash = require('connect-flash');
 const {resourceUsage} = require('process');
 const expressSession = require('express-session');
 const fileUpload = require("express-fileupload");
+const helmet = require('helmet');
+
 
 const homeController = require("./controllers/home.js");
 const leaguesController = require("./controllers/leagues.js");
@@ -16,13 +17,17 @@ const resultsController = require("./controllers/results.js");
 const logoutController = require("./controllers/logout.js");
 const newUserController = require("./controllers/newUser");
 const storeUserController = require("./controllers/storeUser");
-const loginUserController = require("./controllers/loginUser");
-const authMiddleware = require("./middleware/authMiddleware");
 const redirectIfAuthenticatedMiddleware = require("./middleware/redirectIfAuthenticatedMiddleware");
 
 const app = new express();
 
+app.disable('x-powered-by');
+
 app.set("view engine", "ejs");
+app.set('trust proxy', 1)
+
+app.use(helmet());
+
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -32,22 +37,29 @@ app.use(expressSession({ cookie: { maxAge: 60000 },
                   secret: 'woot',
                   resave: false,
                   saveUninitialized: false }));
-
 app.get("/", homeController);
 app.get("/leagues", leaguesController);
 app.get("/course", courseController);
 app.get("/images", imagesController);
 app.get("/results", resultsController);
 app.get("/contacts", contactsController);
-//app.get("/register", newUserController);
+app.get("/auth/register", newUserController);
 app.get("/login", loginController);
 app.get("/logout", logoutController);
 
 app.get("/auth/register", redirectIfAuthenticatedMiddleware, newUserController);
-app.post("/users/register", function(req, res){
+app.post("users//register", function(){
    redirectIfAuthenticatedMiddleware, storeUserController
     });
 let port = process.env.PORT || 4000;
+
+/*app.use((req, res, next) => {
+  res.status(404).send("Sorry...can't find that.")
+})
+app.use((err, req, res, next) => {
+  console.error(err.stack)
+  res.status(500).send('Something is broken.')
+}) */
 
 app.listen(port, () => {
   console.log("app listening on ", port);

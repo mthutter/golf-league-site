@@ -1,6 +1,8 @@
 module.exports = (req,res) => {
+res.render('register')
+}
 
-    var username = ""
+ /*   var username = ""
     var first = ""
     var last = ""
     var email = ""
@@ -19,7 +21,7 @@ module.exports = (req,res) => {
     }
 
     res.render('register', {
-        //errors: req.flash('validationErrors'), 
+        errors: req.flash('validationErrors'), 
         username: username,
         first: first,
         last: last,
@@ -27,4 +29,4 @@ module.exports = (req,res) => {
         phone: phone,
         password: password
     })
-}
+}  */

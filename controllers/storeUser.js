@@ -3,6 +3,11 @@ const path = require('path')
 
 //add PG user add function
 
-User.insertUserTableData('username', 'first', 'last', 'email', 'phone', 'password');
+module.exports = (req,res) => {
 
+
+User.insertUserTableData(req.body, (error,user) => {
+    res.redirect('/');
+})
+}
    
