@@ -79,19 +79,27 @@ td
 	text-align:center;}
 .xl66
 	{mso-style-parent:style0;
-	text-align:center;
-	border:.5pt solid windowtext;}
-.xl67
-	{mso-style-parent:style0;
 	font-weight:700;
 	text-align:center;
-	border:.5pt solid windowtext;}
+	border:.5pt solid windowtext;
+	background:#33CC33;
+	mso-pattern:black none;}
+.xl67
+	{mso-style-parent:style0;
+	border:.5pt solid windowtext;
+	background:#33CC33;
+	mso-pattern:black none;}
 .xl68
 	{mso-style-parent:style0;
-	border:.5pt solid windowtext;}
+	text-align:center;
+	border:.5pt solid windowtext;
+	background:#33CC33;
+	mso-pattern:black none;}
 .xl69
 	{mso-style-parent:style16;
 	color:#0563C1;
 	text-decoration:underline;
 	text-underline-style:single;
-	border:.5pt solid windowtext;}
+	border:.5pt solid windowtext;
+	background:#33CC33;
+	mso-pattern:black none;}
