@@ -48,7 +48,7 @@ app.get("/login", loginController);
 app.get("/logout", logoutController);
 
 app.get("/auth/register", redirectIfAuthenticatedMiddleware, newUserController);
-app.post("users//register", function(){
+app.post("/users/register", function(){
    redirectIfAuthenticatedMiddleware, storeUserController
     });
 let port = process.env.PORT || 4000;
