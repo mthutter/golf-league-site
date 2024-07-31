@@ -26,7 +26,8 @@ app.disable('x-powered-by');
 app.set("view engine", "ejs");
 app.set('trust proxy', 1)
 
-app.use(helmet());
+//added to support Juicebox
+//app.use(helmet());
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
