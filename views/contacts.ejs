@@ -32,7 +32,7 @@
   <%- include('layouts/header');-%>
 
     <script language="JavaScript">
-      <!--
+    
        var c_lTabs=1;
       
        var c_rgszSh=new Array(c_lTabs);
@@ -330,14 +330,24 @@
 </head>
 
 <body>
+  <section>
+    <%- include('layouts/navbar'); -%>
+  </section>
 
-  <%- include('layouts/navbar'); -%>
-
+  <section>
     <div class="m-5 d-flex flex-row justify-content-evenly align-items-center">
       <iframe src="/docs/contacts/Contacts_files/sheet001.htm" title="test" scrolling="no" name="frSheet" width="500px"
         height="350px"></iframe>
     </div>
+  </section>
 
+  <section>
     <%- include('layouts/footer'); -%>
+  </section>
+
+  <section>
+    <%- include('./layouts/scripts'); -%>
+  </section>
+
 
 </body>
