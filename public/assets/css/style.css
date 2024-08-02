@@ -13,7 +13,8 @@ html {
 video {
   max-width: 350px;
   height: auto;
-  border: solid rgb(53, 116, 17) 5px;
+  border: solid rgb(21, 46, 7) 5px;
+  border-radius: 10px;
   margin: 10px;
 }
 
