@@ -30,7 +30,9 @@ app.set("trust proxy", 1);
 app.use(helmet());
 app.use(helmet.contentSecurityPolicy({
   directives: {
-    scriptSrc: ["'self'", "'https://static.elfsight.com'", "'https://cdn.jsdelivr.net'"],
+    scriptSrc: ["'self'", "https://static.elfsight.com", "https://cdn.jsdelivr.net"],
+    connectSrc: ["'self'", "https://core.service.elfsight.com"],
+    imgSrc: ["'self'", "https://files.elfsightcdn.com"]
   }
 }))
 app.use(express.static("public"));
