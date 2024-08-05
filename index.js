@@ -27,7 +27,7 @@ app.disable("x-powered-by");
 app.set("view engine", "ejs");
 app.set("trust proxy", 1);
 
-//app.use(helmet());
+app.use(helmet());
 app.use(helmet.contentSecurityPolicy({
   directives: {
     scriptSrc: ["'self'", "https://fonts.gstatic.com", "https://fonts.googleapis.com", "https://static.elfsight.com", "https://cdn.jsdelivr.net"],
