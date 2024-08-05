@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const flash = require('connect-flash');
 const {resourceUsage} = require('process');
 const expressSession = require('express-session');
+const MemoryStore = require('memorystore')(expressSession);
 const fileUpload = require("express-fileupload");
 const helmet = require('helmet');
 
@@ -39,6 +40,7 @@ app.use(fileUpload());
 app.use(flash());
 app.use(expressSession({ cookie: { maxAge: 60000 },
                   secret: 'woot',
+                  store: new MemoryStore({checkPeriod: 86400000}),
                   resave: false,
                   saveUninitialized: false }));
 app.get("/", homeController);
