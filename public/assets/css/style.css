@@ -122,12 +122,11 @@ h6 {
 }
 
 table,
-th,
 td {
+  background-color: rgb(38, 168, 38);  
   border: 1px solid black;
-}
-
-td {
-  background-color: rgb(38, 168, 38);
-  width: 1px;
+  text-align: center; 
+  font-weight: bold;
+  border-collapse: collapse;
+  table-layout: fixed; 
 }
