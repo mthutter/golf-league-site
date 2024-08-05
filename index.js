@@ -28,13 +28,13 @@ app.set("view engine", "ejs");
 app.set("trust proxy", 1);
 
 //app.use(helmet());
-/*app.use(helmet.contentSecurityPolicy({
+app.use(helmet.contentSecurityPolicy({
   directives: {
     scriptSrc: ["'self'", "https://fonts.gstatic.com", "https://fonts.googleapis.com", "https://static.elfsight.com", "https://cdn.jsdelivr.net"],
     connectSrc: ["'self'", "https://core.service.elfsight.com", "https://cdn.jsdelivr.net"],
     imgSrc: ["'self'", "https://fonts.gstatic.com", "https://fonts.googleapis.com", "https://cdn.jsdelivr.net", "https://static.elfsight.com", "https://files.elfsightcdn.com"]
   }
-}));*/
+}));
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
