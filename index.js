@@ -1,12 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const flash = require('connect-flash');
-const {resourceUsage} = require('process');
-const expressSession = require('express-session');
-const MemoryStore = require('memorystore')(expressSession);
+const flash = require("connect-flash");
+const { resourceUsage } = require("process");
+const expressSession = require("express-session");
+const MemoryStore = require("memorystore")(expressSession);
 const fileUpload = require("express-fileupload");
-const helmet = require('helmet');
-
+const helmet = require("helmet");
 
 const homeController = require("./controllers/home.js");
 const leaguesController = require("./controllers/leagues.js");
@@ -25,10 +24,10 @@ const redirectIfAuthenticatedMiddleware = require("./middleware/redirectIfAuthen
 
 const app = new express();
 
-app.disable('x-powered-by');
+app.disable("x-powered-by");
 
 app.set("view engine", "ejs");
-app.set('trust proxy', 1)
+app.set("trust proxy", 1);
 
 //added to support Juicebox
 //app.use(helmet());
@@ -38,11 +37,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(fileUpload());
 app.use(flash());
-app.use(expressSession({ cookie: { maxAge: 60000 },
-                  secret: 'woot',
-                  store: new MemoryStore({checkPeriod: 86400000}),
-                  resave: false,
-                  saveUninitialized: false }));
+app.use(
+  expressSession({
+    cookie: { maxAge: 60000 },
+    secret: "woot",
+    store: new MemoryStore({ checkPeriod: 86400000 }),
+    resave: false,
+    saveUninitialized: false,
+  }),
+);
 app.get("/", homeController);
 app.get("/leagues", leaguesController);
 app.get("/course", courseController);
@@ -57,42 +60,39 @@ app.get("/login", loginController);
 app.get("/logout", logoutController);
 
 app.get("/auth/register", redirectIfAuthenticatedMiddleware, newUserController);
-app.post("/users/register", function(){
-   redirectIfAuthenticatedMiddleware, storeUserController
-    });
+app.post("/users/register", function () {
+  redirectIfAuthenticatedMiddleware, storeUserController;
+});
 let port = process.env.PORT || 4000;
-
 
 //video test stream
 
-app.get('/video', function(req, res) {
-  const path = '/images/img_0483.webm'
-  const stat = fs.statSync(path)
-  const fileSize = stat.size
-  const range = req.headers.range
+app.get("/video", function (req, res) {
+  const path = "/images/img_0483.webm";
+  const stat = fs.statSync(path);
+  const fileSize = stat.size;
+  const range = req.headers.range;
   if (range) {
-    const parts = range.replace(/bytes=/, "").split("-")
-    const start = parseInt(parts[0], 10)
-    const end = parts[1] 
-      ? parseInt(parts[1], 10)
-      : fileSize-1
-    const chunksize = (end-start)+1
-    const file = fs.createReadStream(path, {start, end})
+    const parts = range.replace(/bytes=/, "").split("-");
+    const start = parseInt(parts[0], 10);
+    const end = parts[1] ? parseInt(parts[1], 10) : fileSize - 1;
+    const chunksize = end - start + 1;
+    const file = fs.createReadStream(path, { start, end });
     const head = {
-      'Content-Range': `bytes ${start}-${end}/${fileSize}`,
-      'Accept-Ranges': 'bytes',
-      'Content-Length': chunksize,
-      'Content-Type': 'video/mp4',
-    }
+      "Content-Range": `bytes ${start}-${end}/${fileSize}`,
+      "Accept-Ranges": "bytes",
+      "Content-Length": chunksize,
+      "Content-Type": "video/mp4",
+    };
     res.writeHead(206, head);
     file.pipe(res);
   } else {
     const head = {
-      'Content-Length': fileSize,
-      'Content-Type': 'video/mp4',
-    }
-    res.writeHead(200, head)
-    fs.createReadStream(path).pipe(res)
+      "Content-Length": fileSize,
+      "Content-Type": "video/mp4",
+    };
+    res.writeHead(200, head);
+    fs.createReadStream(path).pipe(res);
   }
 });
 

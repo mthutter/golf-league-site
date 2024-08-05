@@ -1,22 +1,21 @@
-const bcrpt = require('bcrypt')
-const User = require('../models/database')
+const bcrpt = require("bcrypt");
+const User = require("../models/database");
 
-module.exports = (req,res) => {
-    const{username,password} = req.body
+module.exports = (req, res) => {
+  const { username, password } = req.body;
 
-    User.findOne({username: username}, (error,user) => {
-        if(user){
-            bcrpt.compare(password, user.password, (error,same) => {
-                if(same){
-                    req.session.userId = user._id
-                    res.redirect('/')
-                } else {
-                    res.redirect('/auth/login')
-                }
-            })
+  User.findOne({ username: username }, (error, user) => {
+    if (user) {
+      bcrpt.compare(password, user.password, (error, same) => {
+        if (same) {
+          req.session.userId = user._id;
+          res.redirect("/");
+        } else {
+          res.redirect("/auth/login");
         }
-        else {
-            res.redirect('/auth/login')
-        }
-    })
-}
+      });
+    } else {
+      res.redirect("/auth/login");
+    }
+  });
+};

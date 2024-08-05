@@ -1,8 +1,8 @@
-module.exports = (req,res) => {
-res.render('register')
-}
+module.exports = (req, res) => {
+  res.render("register");
+};
 
- /*   var username = ""
+/*   var username = ""
     var first = ""
     var last = ""
     var email = ""

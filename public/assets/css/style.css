@@ -123,10 +123,10 @@ h6 {
 
 table,
 td {
-  background-color: rgb(38, 168, 38);  
+  background-color: rgb(38, 168, 38);
   border: 1px solid black;
-  text-align: center; 
+  text-align: center;
   font-weight: bold;
   border-collapse: collapse;
-  table-layout: fixed; 
+  table-layout: fixed;
 }
