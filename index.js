@@ -32,7 +32,7 @@ app.use(helmet.contentSecurityPolicy({
   directives: {
     scriptSrc: ["'self'", "https://static.elfsight.com", "https://cdn.jsdelivr.net"],
     connectSrc: ["'self'", "https://core.service.elfsight.com"],
-    imgSrc: ["'self'", "https://files.elfsightcdn.com"]
+    imgSrc: ["'self'", "https://bottoms-up-iyzk.onrender.com/images", "https://bottoms-up-iyzk.onrender.com/images", "https://static.elfsight.com", "https://files.elfsightcdn.com"]
   }
 }))
 app.use(express.static("public"));
