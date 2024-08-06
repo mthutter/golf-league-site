@@ -134,3 +134,8 @@ td {
 .table-9-12 {
 color: brown;
 }
+
+ul {
+  text-align: justify;
+  list-style-type: none;
+}
