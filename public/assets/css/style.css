@@ -1,13 +1,22 @@
 /** @format */
 
-body,
 html {
-  height: 100vh;
-  width: 100vw;
+  background-color: green;
+}
+
+@media (max-width: 880px) {
+  body {
+    background-color: green;
+    background-image: none !important;
+  }
+}
+
+body {  
   background-image: url(/images/golf-hole-2.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-color: green;
 }
 
 video {
@@ -132,7 +141,7 @@ td {
 }
 
 .table-9-12 {
-color: brown;
+  color: brown;
 }
 
 ul {
