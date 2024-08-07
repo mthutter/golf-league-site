@@ -4,21 +4,20 @@ html {
   background-color: green;
 }
 
-@media (max-width: 650px) {
-  body {
-    background-color: green;
-    background-image: none !important;
-  }
-}
-
 body {
   width: 100vw;
   height: 100vh;
   background-image: url(/images/golf-hole-2.jpg);
+  background-color: green;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-color: green;
+  background-size: 80% 80% ;
+}
+
+@media (max-width: 650px) {
+  body {
+    background-image: none !important;    
+  }
 }
 
 video {
@@ -26,7 +25,7 @@ video {
   height: auto;
   border: solid rgb(21, 46, 7) 5px;
   border-radius: 10px;
-  margin: 10px;
+  margin: 5px;
 }
 
 .navbar-brand {
@@ -85,9 +84,9 @@ video {
   background-color: rgb(14, 122, 56);
   color: darkgreen;
   height: 400px;
-  width: 450px;
+  width: 400px;
   border: solid black 5px;
-  border-radius: 5%;
+  border-radius: 15px;
 }
 
 .course {
