@@ -4,14 +4,14 @@ html {
   background-color: green;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 650px) {
   body {
     background-color: green;
     background-image: none !important;
   }
 }
 
-body {  
+body {
   width: 100vw;
   height: 100vh;
   background-image: url(/images/golf-hole-2.jpg);
@@ -141,6 +141,7 @@ td {
   font-weight: bold;
   border-collapse: collapse;
   table-layout: fixed;
+  margin: auto;
 }
 
 .table-9-12 {
