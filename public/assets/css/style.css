@@ -87,7 +87,7 @@ video {
   height: 400px;
   width: 450px;
   border: solid black 5px;
-  border-radius: 15%;
+  border-radius: 5%;
 }
 
 .course {
