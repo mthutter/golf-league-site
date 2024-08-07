@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- header section -->
-<%- include('layouts/header') -%>
+  <!-- header section -->
+  <%- include('layouts/header') -%>
 
   <body>
-
-    <section id="navbar">
-      <%- include('layouts/navbar') -%>
-    </section>
+    <section id="navbar"><%- include('layouts/navbar') -%></section>
 
     <section>
-      <div class="container" style="margin: 10%; margin-left: 35%;">
-        <label style="font-weight: bold;" for="exampleFormControlInput1" class="form-label"><h4>LOGIN</h4></label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      <div class="container align-items-center">
+        <div class="col">
+          <label
+            style="font-weight: bold"
+            for="exampleFormControlInput1"
+            class="form-label"
+            ><h4>LOGIN</h4></label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="name@example.com"
+          />
 
-        <label for="inputPassword6" class="col-form-label"></label>
-        <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline"
-          placeholder="Password">
+          <label for="inputPassword6" class="col-form-label"></label>
+          <input
+            type="password"
+            id="inputPassword6"
+            class="form-control"
+            aria-describedby="passwordHelpInline"
+            placeholder="Password"
+          />
+        </div>
       </div>
-
     </section>
 
-    <section id="footer">
-      <%- include('./layouts/footer'); -%>
-    </section>
+    <section id="footer"><%- include('./layouts/footer'); -%></section>
 
-    <section id="scripts">
-      <%- include('./layouts/scripts'); -%>
-    </section>
-
+    <section id="scripts"><%- include('./layouts/scripts'); -%></section>
   </body>
-
 </html>
