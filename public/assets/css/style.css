@@ -12,6 +12,8 @@ html {
 }
 
 body {  
+  width: 100vw;
+  height: 100vh;
   background-image: url(/images/golf-hole-2.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -37,6 +39,7 @@ video {
   border: solid green 5px;
   color: lightgreen;
   margin: 10px;
+  margin-top: 25px;
   padding: 5px;
 }
 
