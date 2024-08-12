@@ -1,4 +1,4 @@
-const User = require("../models/database");
+const User = require("../models");
 const path = require("path");
 
 //add PG user add function

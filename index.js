@@ -7,6 +7,11 @@ const MemoryStore = require("memorystore")(expressSession);
 const fileUpload = require("express-fileupload");
 const helmet = require("helmet");
 const app = new express();
+const dotenv = require("dotenv").config();
+const cookieParser = require("cookie-parser");
+const sequelize = require("sequelize");
+const db = require('./models');
+const userRoutes = require('./routes/userRoutes')
 
 const homeController = require("./controllers/home.js");
 const courseController = require("./controllers/course.js");
@@ -36,6 +41,17 @@ app.use(helmet.contentSecurityPolicy({
   }
 }));
 app.use(express.static("public"));
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(cookieParser());
+
+db.sequelize.sync({force: true}).then(() => {
+  console.log("db has been resync'd")
+});
+
+app.use('/api/users', userRoutes);
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(fileUpload());
