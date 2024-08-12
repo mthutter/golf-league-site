@@ -1,3 +1,4 @@
+/*
 //importing modules
 const bcrypt = require("bcrypt");
 const db = require("../models");
@@ -89,3 +90,4 @@ module.exports = {
  signup,
  login,
 };
+*/

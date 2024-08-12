@@ -1,3 +1,4 @@
+/*
 //importing modules
 const {Sequelize, DataTypes} = require('sequelize')
 
@@ -22,3 +23,4 @@ db.users = require('./userModel') (sequelize, DataTypes)
 
 //exporting the module
 module.exports = db
+*/

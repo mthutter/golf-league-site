@@ -9,9 +9,9 @@ const helmet = require("helmet");
 const app = new express();
 const dotenv = require("dotenv").config();
 const cookieParser = require("cookie-parser");
-const sequelize = require("sequelize");
-const db = require('./models');
-const userRoutes = require('./routes/userRoutes')
+//const sequelize = require("sequelize");
+//const db = require('./models');
+//const userRoutes = require('./routes/userRoutes.js/index.js')
 
 const homeController = require("./controllers/home.js");
 const courseController = require("./controllers/course.js");
@@ -46,11 +46,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-db.sequelize.sync({force: true}).then(() => {
-  console.log("db has been resync'd")
-});
+//db.sequelize.sync({force: true}).then(() => {
+//  console.log("db has been resync'd")
+//});
 
-app.use('/api/users', userRoutes);
+//app.use('/api/users', userRoutes);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -78,9 +78,10 @@ app.get("/login", loginController);
 app.get("/logout", logoutController);
 app.get("/auth/register", redirectIfAuthenticatedMiddleware, newUserController);
 
-app.post("/users/register", function () {
-  redirectIfAuthenticatedMiddleware, storeUserController;
-});
+//app.post("/users/register", function () {
+//  redirectIfAuthenticatedMiddleware, storeUserController;
+//});
+
 let port = process.env.PORT || 4000;
 
 app.listen(port, () => {

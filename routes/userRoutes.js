@@ -1,3 +1,4 @@
+/*
 //importing modules
 const express = require('express')
 const userController = require('../controllers/userController')
@@ -14,3 +15,4 @@ router.post('/signup', userAuth.saveUser, signup)
 router.post('/login', login )
 
 module.exports = router
+*/
