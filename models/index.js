@@ -1,4 +1,4 @@
-//importing modules
+/*//importing modules
 const {Sequelize, DataTypes} = require('sequelize')
 
 //Database connection with dialect of postgres specifying the database we are using
@@ -22,3 +22,4 @@ db.users = require('./userModel') (sequelize, DataTypes)
 
 //exporting the module
 module.exports = db
+*/
