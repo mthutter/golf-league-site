@@ -161,17 +161,17 @@ h6 {
   color: cyan;
 }
 
-table,
-td {
+table {
   background-color: rgb(38, 168, 38);
   border: 2px solid black;
   text-align: center;
   font-weight: bold;
-  border-collapse: collapse;
-  table-layout: fixed;
-  margin: auto;
+  border-collapse: collapse;  
 }
 
+td {
+  border: 2px solid black;
+}
 .table-9-12 {
   color: brown;
 }
