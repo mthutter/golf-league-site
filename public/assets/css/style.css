@@ -11,11 +11,11 @@ body {
   background-color: green;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 80% 80% ;
+  background-size: 80% 80%;
 }
 
 .gradient-background {
-  background: linear-gradient(79deg,#b5ec59,#2b61a2,#20f81f,#122a80,#b30e0e);
+  background: linear-gradient(79deg, #b5ec59, #2b61a2, #20f81f, #122a80, #b30e0e);
   background-size: 300% 300%;
   animation: gradient-animation 15s ease infinite;
 }
@@ -32,13 +32,17 @@ body {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
   body {
-    background-image: none !important;    
+    background-image: none !important;
   }
 
-  td {
-    font-size: 10px;
+  tr, td, h5 {
+    font-size: 12px;
+  }
+
+  h4 {
+    font-size: 14px;
   }
 }
 
@@ -170,7 +174,7 @@ table {
   border: 2px solid black;
   text-align: center;
   font-weight: bold;
-  border-collapse: collapse;  
+  border-collapse: collapse;
 }
 
 td {
