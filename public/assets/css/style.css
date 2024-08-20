@@ -36,6 +36,10 @@ body {
   body {
     background-image: none !important;    
   }
+
+  td {
+    font-size: 10px;
+  }
 }
 
 video {
