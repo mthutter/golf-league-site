@@ -35,7 +35,7 @@ app.set("trust proxy", 1);
 app.use(helmet());
 app.use(helmet.contentSecurityPolicy({
   directives: {
-    scriptSrc: ["'self'", "fonts.gstatic.com", "fonts.googleapis.com", "static.elfsight.com", "cdn.jsdelivr.net"],
+    scriptSrc: ["'self' data:", "fonts.gstatic.com", "fonts.googleapis.com", "static.elfsight.com", "cdn.jsdelivr.net"],
     connectSrc: ["'self'", "core.service.elfsight.com", "cdn.jsdelivr.net"],
     imgSrc: ["'self' data:", "'self'", "fonts.gstatic.com", "fonts.googleapis.com", "cdn.jsdelivr.net/npm/bootstrap@5.3.3", "static.elfsight.com", "files.elfsightcdn.com", "www.w3.org"]
   }
