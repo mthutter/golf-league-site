@@ -2,10 +2,13 @@
 
 html {
   background-color: green;
+  overflow-x: hidden;
+  overflow: scroll;
 }
 
 body {
-  width: 100vw;
+  width: 100%;
+  margin: 0;
   height: 100vh;
   background-image: url(/images/golf-hole-2.jpg);
   background-color: green;
@@ -55,7 +58,7 @@ video {
   font-weight: bolder;
   border: solid green 5px;
   color: lightgreen;
-  margin: 10px;
+ 
   margin-top: 25px;
   padding: 5px;
 }
