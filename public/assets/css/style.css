@@ -177,6 +177,8 @@ table {
   text-align: center;
   font-weight: bold;
   border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 td {
