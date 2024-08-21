@@ -37,7 +37,9 @@ body {
     background-image: none !important;
   }
 
-  tr, td, h5 {
+  tr,
+  td,
+  h5 {
     font-size: 12px;
   }
 
@@ -179,6 +181,9 @@ table {
 
 td {
   border: 2px solid black;
+  white-space: nowrap;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .table-9-12 {
   color: brown;
