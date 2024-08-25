@@ -1,50 +1,65 @@
 <!DOCTYPE html>
 <html class="gradient-background" lang="en">
+  <!-- header section -->
+  <%- include('./layouts/header'); -%>
 
-<!-- header section -->
-<%- include('./layouts/header'); -%>
+  <body class="gradient-background">
+    <section id="navbar"><%- include('./layouts/navbar'); -%></section>
 
-    <body class="gradient-background">
-
-        <section id="navbar">
-            <%- include('./layouts/navbar'); -%>
-        </section>
-
-        <section>
-            <div>
-                <br>
-                <div class="container text-center">
-                    <h4>2024 League "Rules" and Information: <a
-                            href="/docs/Bottoms Up 2024 League Info and Rules (04-29-24).docx">HERE</a></h4>
-                </div>
-                <br>
-                <div class="container text-center align-items-center justify-content-center">
-                    <div class="row">
-                        <div class="col">
-                            <a href="/images"><img class="m-3 main-small" src="/images/img_0530.jpg" alt="john peeing"
-                                    srcset="" title="No Peeing"></a>
-                        </div>
-                        <div class="col">
-                            <a href="/images"><img class="m-3 main-large" src="/images/IMG_0540.jpg"
-                                    alt="hockey russ in bunker" srcset="" title="Not Legal"></a>
-                        </div>
-                        <div class="col">
-                            <a href="/images"><img class="m-3 main-small" src="/images/img_0305.jpg"
-                                    alt="gavin on tee box" srcset="" title="Nice Mountain"></a>
-                        </div>
-                    </div>
-                </div>
+    <section>
+      <div>
+        <br />
+        <div class="container text-center">
+          <h4>
+            2024 League "Rules" and Information:
+            <a
+              href="/docs/Bottoms Up 2024 League Info and Rules (04-29-24).docx"
+              >HERE</a
+            >
+          </h4>
+        </div>
+        <br />
+        <div
+          class="container text-center align-items-center justify-content-center"
+        >
+          <div class="row">
+            <div class="col">
+              <a href="/images"
+                ><img
+                  class="m-3 main-small"
+                  src="/images/img_0530.jpg"
+                  alt="john peeing"
+                  srcset=""
+                  title="No Peeing"
+              /></a>
             </div>
-        </section>
+            <div class="col">
+              <a href="/images"
+                ><img
+                  class="m-3 main-large"
+                  src="/images/IMG_0540.jpg"
+                  alt="hockey russ in bunker"
+                  srcset=""
+                  title="Not Legal"
+              /></a>
+            </div>
+            <div class="col">
+              <a href="/images"
+                ><img
+                  class="m-3 main-small"
+                  src="/images/img_0305.jpg"
+                  alt="gavin on tee box"
+                  srcset=""
+                  title="Nice Mountain"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="footer">
-            <%- include('./layouts/footer'); -%>
-        </section>
+    <section id="footer"><%- include('./layouts/footer'); -%></section>
 
-        <section id="scripts">
-            <%- include('./layouts/scripts'); -%>
-        </section>
-
-    </body>
-
+    <section id="scripts"><%- include('./layouts/scripts'); -%></section>
+  </body>
 </html>

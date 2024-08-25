@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="gradient-background" lang="en">
-<%- include('./layouts/header'); -%>
+  <%- include('./layouts/header'); -%>
   <style>
     a {
       color: rgb(8, 70, 6);
@@ -13,46 +13,79 @@
     <section><%- include('./layouts/navbar'); -%></section>
 
     <section>
-      <div class="container">
-        <div style="padding: 25px;" class="row m-3">
-          <div class="col file-list m-2">
-            <div>
-              <h3>Weekly Results - Front Nine</h3>
-              <p>(May 27 - July 15)</p>
-            </div>
-            <div>
-              <a href="/results/Bottoms Up 2024 League Stats - Week 4.xlsx">Week 4 - May 27</a><br />
-              <a href="/results/Bottoms Up 2024 League Stats - Week 5.xlsx">Week 5 - June 3</a><br />
-              <a href="/results/Bottoms Up 2024 League Stats - Week 6.xlsx">Week 6 - June 10</a><br />
-              <a href="/results/Bottoms Up 2024 League Stats - Week 7.xlsx">Week 7 - June 17</a><br />
-              <a href="/results/Bottoms Up 2024 League Stats - Week 8.xlsx">Week 8 - June 24</a><br />
-              <a href="/results/Bottoms Up 2024 League Stats - Week 9.xlsx">Week 9 - July 1</a><br />
-              <a href="/results/Bottoms Up 2024 League Stats - Week 10.xlsx">Week 10 - July 8</a><br />
-              <a href="/results/Bottoms Up 2024 League Stats - Week 11.xlsx">Week 11 - July 15</a>
-            </div>
+      <div class="container justify-content-center align-items-center">
+        <div class="row">
+          <div class="col-auto file-list">
+            <h3>Weekly Results - Front Nine</h3>
+            <p>(May 27 - July 15)</p>
+
+            <a href="/results/Bottoms Up 2024 League Stats - Week 4.xlsx"
+              >Week 4 - May 27</a
+            ><br />
+            <a href="/results/Bottoms Up 2024 League Stats - Week 5.xlsx"
+              >Week 5 - June 3</a
+            ><br />
+            <a href="/results/Bottoms Up 2024 League Stats - Week 6.xlsx"
+              >Week 6 - June 10</a
+            ><br />
+            <a href="/results/Bottoms Up 2024 League Stats - Week 7.xlsx"
+              >Week 7 - June 17</a
+            ><br />
+            <a href="/results/Bottoms Up 2024 League Stats - Week 8.xlsx"
+              >Week 8 - June 24</a
+            ><br />
+            <a href="/results/Bottoms Up 2024 League Stats - Week 9.xlsx"
+              >Week 9 - July 1</a
+            ><br />
+            <a href="/results/Bottoms Up 2024 League Stats - Week 10.xlsx"
+              >Week 10 - July 8</a
+            ><br />
+            <a href="/results/Bottoms Up 2024 League Stats - Week 11.xlsx"
+              >Week 11 - July 15</a
+            >
           </div>
-          <div class="col file-list m-2">
-            <div>
+          
+            <div class="col-auto file-list">
               <h3>Weekly Results - Back Nine</h3>
               <p>(July 22 - Sept 30)</p>
-            </div>
-            <div>
-              <a href="/results/Bottoms Up 2024 League Stats - Week 12.xlsx">Week 12 - July 22</a><br />
-              <a href="/results/Bottoms Up 2024 League Stats - Week 13.xlsx">Week 13 - July 29</a><br />
-              <h3 style="margin: 0; color: rgb(8, 70, 6); font-size: larger; font-weight: bolder;">Week 14 - August 5 (RAIN OUT)</h3>
-              <a href="/results/Bottoms Up 2024 League Stats - Week 15.xlsx">Week 15 - August 12</a><br />
-              <h3 style="margin: 0; color: rgb(8, 70, 6); font-size: larger; font-weight: bolder;">Week 16 - August 19 (RAIN OUT)</h3>
-            </div>
-          </div>
 
+              <a href="/results/Bottoms Up 2024 League Stats - Week 12.xlsx"
+                >Week 12 - July 22</a
+              ><br />
+              <a href="/results/Bottoms Up 2024 League Stats - Week 13.xlsx"
+                >Week 13 - July 29</a
+              ><br />
+              <h3
+                style="
+                  margin: 0;
+                  color: rgb(8, 70, 6);
+                  font-size: larger;
+                  font-weight: bolder;
+                "
+              >
+                Week 14 - August 5 (RAIN OUT)
+              </h3>
+              <a href="/results/Bottoms Up 2024 League Stats - Week 15.xlsx"
+                >Week 15 - August 12</a
+              ><br />
+              <h3
+                style="
+                  margin: 0;
+                  color: rgb(8, 70, 6);
+                  font-size: larger;
+                  font-weight: bolder;
+                "
+              >
+                Week 16 - August 19 (RAIN OUT)
+              </h3>
+            </div>
+         
         </div>
       </div>
-
     </section>
 
     <section><%- include('./layouts/footer'); -%></section>
 
     <section><%- include('./layouts/scripts'); -%></section>
   </body>
-
 </html>
