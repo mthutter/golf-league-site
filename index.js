@@ -21,11 +21,11 @@ const videosController = require("./controllers/videos.js");
 const teetimesController = require("./controllers/tee-times.js");
 const standingsController = require("./controllers/standings.js");
 const availabilityController = require("./controllers/availability.js");
-const loginController = require("./controllers/login.js");
+//const loginController = require("./controllers/login.js");
 const resultsController = require("./controllers/results.js");
-const logoutController = require("./controllers/logout.js");
+//const logoutController = require("./controllers/logout.js");
 const newUserController = require("./controllers/newUser");
-const storeUserController = require("./controllers/storeUser");
+//const storeUserController = require("./controllers/storeUser");
 const redirectIfAuthenticatedMiddleware = require("./middleware/redirectIfAuthenticatedMiddleware");
 
 app.disable("x-powered-by");
@@ -77,8 +77,8 @@ app.get("/tee-times", teetimesController);
 app.get("/standings", standingsController);
 app.get("/availability", availabilityController);
 app.get("/auth/register", newUserController);
-app.get("/login", loginController);
-app.get("/logout", logoutController);
+//app.get("/login", loginController);
+//app.get("/logout", logoutController);
 app.get("/auth/register", redirectIfAuthenticatedMiddleware, newUserController);
 
 //app.post("/users/register", function () {
