@@ -1,3 +1,4 @@
+const fs = require('fs');
 const express = require("express");
 const bodyParser = require("body-parser");
 const flash = require("connect-flash");
@@ -67,9 +68,32 @@ app.use(expressSession({
   }),
 );
 
+const directoryPath = "public/images";
+const imageFiles = [];
+var index = 0;
+
+fs.readdir(directoryPath, (err, files) => {
+  if (err) {
+    console.error("Error reading directory:", err);
+    return;
+  }
+  // Log the list of file names
+  console.log("Files in the directory:");
+
+  files.forEach((file) => {
+    console.log(file);
+    imageFiles[index] = file;
+    console.log("From array:" + imageFiles[index]);
+    index++;
+  });
+});
+
 app.get("/", homeController);
 app.get("/course", courseController);
-app.get("/images", imagesController);
+app.get("/images", async (req, res) => {
+  console.log(req.session);
+  res.render("images", { items: imageFiles });
+});
 app.get("/videos", videosController);
 app.get("/results", resultsController);
 app.get("/contacts", contactsController);
