@@ -1,4 +1,6 @@
-const fs = require('fs');
+/** @format */
+
+const fs = require("fs");
 const express = require("express");
 const bodyParser = require("body-parser");
 const flash = require("connect-flash");
@@ -35,13 +37,15 @@ app.set("view engine", "ejs");
 app.set("trust proxy", 1);
 
 app.use(helmet());
-app.use(helmet.contentSecurityPolicy({
-  directives: {
-    scriptSrc: ["'self' data:", "fonts.gstatic.com", "fonts.googleapis.com", "static.elfsight.com", "cdn.jsdelivr.net"],
-    connectSrc: ["'self'", "core.service.elfsight.com", "cdn.jsdelivr.net"],
-    imgSrc: ["'self' data:", "'self'", "fonts.gstatic.com", "fonts.googleapis.com", "cdn.jsdelivr.net/npm/bootstrap@5.3.3", "static.elfsight.com", "files.elfsightcdn.com", "www.w3.org"]
-  }
-}));
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      scriptSrc: ["'self' data:", "fonts.gstatic.com", "fonts.googleapis.com", "static.elfsight.com", "cdn.jsdelivr.net"],
+      connectSrc: ["'self'", "core.service.elfsight.com", "cdn.jsdelivr.net"],
+      imgSrc: ["'self' data:", "'self'", "fonts.gstatic.com", "fonts.googleapis.com", "cdn.jsdelivr.net/npm/bootstrap@5.3.3", "static.elfsight.com", "files.elfsightcdn.com", "www.w3.org"],
+    },
+  })
+);
 
 app.use(express.static("public"));
 
@@ -59,13 +63,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(fileUpload());
 app.use(flash());
-app.use(expressSession({
+app.use(
+  expressSession({
     cookie: { maxAge: 60000 },
     secret: "woot",
     store: new MemoryStore({ checkPeriod: 86400000 }),
     resave: false,
     saveUninitialized: false,
-  }),
+  })
 );
 
 const directoryPath = "public/images";
@@ -76,14 +81,10 @@ fs.readdir(directoryPath, (err, files) => {
   if (err) {
     console.error("Error reading directory:", err);
     return;
-  }
-  // Log the list of file names
-  console.log("Files in the directory:");
-
+  }  
   files.forEach((file) => {
     console.log(file);
-    imageFiles[index] = file;
-    console.log("From array:" + imageFiles[index]);
+    imageFiles[index] = file; 
     index++;
   });
 });
