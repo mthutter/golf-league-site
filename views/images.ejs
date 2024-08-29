@@ -14,14 +14,19 @@
       </div> -->
       <br>
       <div class="container">
-        <div class="row" >
-            <% items.forEach((item) => { %>
-                <div class="col-md-8 mt-3 col-lg-3">
-                    <img src="/images/<%= item %>" class="img-fluid" alt="image">
-                </div>
-                <% }) %>                
+        <div class="row">
+          <% items.forEach((item)=> { %>
+            <div class="col-md-8 mt-3 col-lg-3">
+              <a href="/images/<%= item %>" data-toggle="lightbox" data-gallery="league"><img
+                  style="border-radius: 15px; border: solid rgb(40, 54, 13) 3px;" src="/images/<%= item %>"
+                  class="img-fluid">
+              </a>
+            </div>
+
+            <% }) %>
         </div>
-    </div>
+      </div>
+      </div>
     </section>
 
 
@@ -37,6 +42,13 @@
         <%- include('./layouts/scripts'); -%>
       </div>
     </section>
+
+    <script>
+      $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+      });
+    </script>
 
   </body>
 
