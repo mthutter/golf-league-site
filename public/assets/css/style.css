@@ -1,25 +1,24 @@
 /** @format */
 
 html {
-  background-color: green;
+  height: auto;
   overflow-x: hidden;
   overflow: scroll;
 }
 
-body {
+body {  
   width: 100%;
   margin: 0;
   height: 100vh;
   background-image: url(/images/golf-hole-2.jpg);
   background-color: green;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: 80% 80%;
 }
 
 .gradient-background {
   background: linear-gradient(79deg, #b5ec59, #2b61a2, #20f81f, #122a80, #b30e0e);
-  background-size: 300% 300%;
+  background-size: 400% 400%;
   animation: gradient-animation 15s ease infinite;
 }
 
