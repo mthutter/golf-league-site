@@ -104,9 +104,18 @@ video {
   background-color: rgb(14, 122, 56);
   color: darkgreen;
   height: 400px;
-  width: 400px;
+  width: 450px;
   border: solid black 5px;
   border-radius: 15px;
+}
+
+.main-schedule {
+  background-color: rgb(14, 122, 56);
+  color: darkgreen;  
+  height: 200px;
+  width: 330px;
+  border: solid black 5px;
+  border-radius: 12px;
 }
 
 .login-box {
