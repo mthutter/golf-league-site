@@ -14,12 +14,12 @@
       </div> -->
       <br>
       <div class="container">
-        <div class="row">
+        <div class="row justify-content-center align-items-center">
           <% items.forEach((item)=> { %>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-4 my-2">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-4 my-2 images">
               <a href="/images/<%= item %>" target="_blank"><img
                   style="border-radius: 5%; border: solid rgb(40, 54, 13) 3px;" src="/images/<%= item %>"
-                  class="img-fluid clearfix">
+                  class="img-fluid clearfix justify-content-center align-items-center">
               </a>
             </div>
             <% }) %>
