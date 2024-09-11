@@ -156,7 +156,7 @@ a {
   padding: 5px;
 } 
 
-.images:hover { 
+.images:hover, video:hover { 
   border: solid rgb(43, 167, 31) 8px;
   border-radius: 20px;
   padding: 5px;
