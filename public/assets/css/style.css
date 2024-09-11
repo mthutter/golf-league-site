@@ -2,8 +2,9 @@
 
 html {
   height: auto;
-  overflow-x: hidden;
+  overflow-x: hidden; 
   overflow: scroll;
+ 
 }
 
 body {  
@@ -13,7 +14,8 @@ body {
   background-image: url(/images/golf-hole-2.jpg);
   background-color: green;
   background-position: center;
-  background-size: 80% 80%;
+  background-size: 80% 80%;  
+  font-family: Poppins;
 }
 
 .gradient-background {
@@ -56,8 +58,7 @@ video {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
   border: solid green 5px;
-  color: lightgreen;
- 
+  color: lightgreen; 
   margin-top: 25px;
   padding: 5px;
 }
@@ -92,8 +93,7 @@ video {
   justify-content: center;
   text-align: center;
   font-weight: bold;
-  font-size: 1.5rem;
-  font-family: REM;
+  font-size: 1.5rem;  
 }
 
 .form-control {
@@ -113,7 +113,7 @@ video {
   background-color: rgb(14, 122, 56);
   color: darkgreen;  
   height: 160px;
-  width: 330px;
+  width: 350px;
   border: solid black 5px;
   border-radius: 12px;
 }
