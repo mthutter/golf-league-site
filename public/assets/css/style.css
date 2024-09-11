@@ -152,11 +152,11 @@ a {
 
 .navbar-brand:hover, li:hover, .dropdown-item:hover, .results a:hover, h4 a:hover{
   background-color: rgb(43, 167, 31);
-  border-radius: 8px;
+  border-radius: 8px;  
   } 
 
 .images:hover, video:hover { 
-  border: solid rgb(43, 167, 31) 8px;
+  border: solid rgb(20, 90, 13) 5px;
   border-radius: 20px;
   padding: 5px;
 }
