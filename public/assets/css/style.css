@@ -103,7 +103,7 @@ video {
 .file-list {
   background-color: rgb(14, 122, 56);
   color: darkgreen;
-  height: 400px;
+  height: 450px;
   width: 450px;
   border: solid black 5px;
   border-radius: 15px;
@@ -112,7 +112,7 @@ video {
 .main-schedule {
   background-color: rgb(14, 122, 56);
   color: darkgreen;  
-  height: 200px;
+  height: 160px;
   width: 330px;
   border: solid black 5px;
   border-radius: 12px;
