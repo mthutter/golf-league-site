@@ -17,9 +17,14 @@
                 <li class="px-3 nav-item">
                     <a class="nav-link active" aria-current="page" href="/tee-times">Tee Times</a>
                 </li>
-                <li class="px-3 nav-item">
-                    <a class="nav-link active" aria-current="page" href="/standings">Standings</a>
-                </li>                   
+                <li class="dropdown">
+                    <a class="nav-link active dropdown-toggle" role="button" href="/" data-bs-toggle="dropdown"
+                        aria-expanded="true">Standings</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="px-3 nav-link dropdown-item" href="/overall">Overall</a></li>
+                        <li><a class="px-3 nav-link dropdown-item" href="/standings">Second Half</a></li>
+                    </ul>
+                </li>                              
                 <li class="px-3 nav-item">
                     <a class="nav-link active" aria-current="page" href="/images">Images</a>
                 </li>
@@ -28,9 +33,7 @@
                 </li>
                 <li class="dropdown">
                     <a class="nav-link active dropdown-toggle" role="button" href="/" data-bs-toggle="dropdown"
-                        aria-expanded="true">
-                        Member Services
-                    </a>
+                        aria-expanded="true">Member Services</a>
                     <ul class="dropdown-menu">
                         <li><a class="px-3 nav-link dropdown-item" href="/contacts">Member Contacts</a></li>
                         <li><a class="px-3 nav-link dropdown-item" href="/results">Weekly Results</a></li>                    
