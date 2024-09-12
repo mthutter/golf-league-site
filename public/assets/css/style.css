@@ -2,19 +2,18 @@
 
 html {
   height: auto;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   overflow: scroll;
- 
 }
 
-body {  
+body {
   width: 100%;
   margin: 0;
   height: 100vh;
   background-image: url(/images/golf-hole-2.jpg);
   background-color: green;
   background-position: center;
-  background-size: 80% 80%;  
+  background-size: 80% 80%;
   font-family: Poppins;
 }
 
@@ -39,7 +38,7 @@ body {
 @media (max-width: 600px) {
   body {
     background-image: none !important;
-  }  
+  }
 }
 
 video {
@@ -58,7 +57,7 @@ video {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
   border: solid green 5px;
-  color: lightgreen; 
+  color: lightgreen;
   margin-top: 25px;
   padding: 5px;
 }
@@ -93,7 +92,7 @@ video {
   justify-content: center;
   text-align: center;
   font-weight: bold;
-  font-size: 1.5rem;  
+  font-size: 1.5rem;
 }
 
 .form-control {
@@ -111,7 +110,7 @@ video {
 
 .main-schedule {
   background-color: rgb(14, 122, 56);
-  color: darkgreen;  
+  color: darkgreen;
   height: 160px;
   width: 375px;
   border: solid black 5px;
@@ -121,7 +120,7 @@ video {
 .login-box {
   background-color: rgb(14, 122, 56);
   color: darkgreen;
-  height: 185px;  
+  height: 185px;
   border: solid black 5px;
   border-radius: 15px;
   margin-top: 10px;
@@ -150,15 +149,24 @@ a {
   text-decoration: none;
 }
 
-li:hover, .dropdown-item:hover, .results a:hover, h4 a:hover{
+li:hover,
+.dropdown-item:hover,
+.results a:hover,
+h4 a:hover {
   background-color: rgb(43, 167, 31);
-  border-radius: 8px;  
-  } 
+  border-radius: 8px;
+}
 
-.images:hover, video:hover { 
-  border: solid rgb(66, 179, 56) .5rem;
-  border-radius: .5rem;
-  padding: .5rem;
+/*li:visited, .dropdown-item:visited, .results a:visited, h4 a:visited{
+  background-color: rgb(182, 42, 124);
+  border-radius: 8px;  
+} */
+
+.images:hover,
+video:hover {
+  border: solid rgb(66, 179, 56) 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
 p {
