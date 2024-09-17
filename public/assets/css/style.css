@@ -108,6 +108,15 @@ video {
   border-radius: 15px;
 }
 
+.main-images {
+  background-color: rgb(14, 122, 56);
+  color: darkgreen;
+  height: 500px;
+  width: 1000px;
+  border: solid black 5px;
+  border-radius: 15px;
+}
+
 .main-schedule {
   background-color: rgb(14, 122, 56);
   color: darkgreen;
