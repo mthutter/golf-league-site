@@ -1,5 +1,9 @@
 /** @format */
 
+
+const jsdom = require("jsdom");
+const dom = new jsdom.JSDOM("");
+const jquery = require("jquery")(dom.window);
 const fs = require("fs");
 const express = require("express");
 const bodyParser = require("body-parser");
