@@ -127,10 +127,20 @@ video {
 .main-schedule {
   background-color: rgb(14, 122, 56);
   color: darkgreen;
-  height: 105px;
+  height: 65px;
   width: 375px;
-  border: solid black 5px;
+  border: solid black 3px;
   border-radius: 12px;
+}
+
+.main-thanks {
+  background-color: rgb(138, 136, 20);
+  color: darkgreen;
+  height: 90px;
+  width: 600px;
+  border: solid black 2px;
+  border-radius: 12px;
+  
 }
 
 .login-box {
