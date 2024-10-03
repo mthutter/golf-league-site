@@ -1,4 +1,5 @@
 const bcrpt = require("bcrypt");
+
 const User = require("../models/database");
 
 module.exports = (req, res) => {
@@ -11,11 +12,11 @@ module.exports = (req, res) => {
           req.session.userId = user._id;
           res.redirect("/");
         } else {
-          res.redirect("/auth/login");
+          res.redirect("/login");
         }
       });
     } else {
-      res.redirect("/auth/login");
+      res.redirect("/login");
     }
   });
 };

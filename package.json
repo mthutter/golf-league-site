@@ -32,7 +32,8 @@
     "sequelize": "^6.37.3",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7",
-    "ssl": "^1.0.0"
+    "ssl": "^1.0.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "prettier": "3.3.3"

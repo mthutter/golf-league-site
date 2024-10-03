@@ -1,6 +1,6 @@
 const path = require("path");
 
-module.exports = async (req, res) => {
-  console.log(req.session);
+module.exports = async (req, res) => { 
   res.render("overall");
+  console.log(req.session);
 };

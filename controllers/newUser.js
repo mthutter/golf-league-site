@@ -1,5 +1,6 @@
 module.exports = (req, res) => {
   res.render("register");
+  console.log(req.session); 
 };
 
 /*   var username = ""
