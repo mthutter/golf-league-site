@@ -1,6 +1,6 @@
 const User = require("../models/database");
 
-module.exports = (req, res, next) => {
+export default (req, res, next) => {
   User.findById(req.session.userId, (error, user) => {
     if (error || !user) return res.redirect("/");
     next();

@@ -1,41 +1,34 @@
 /** @format */
-const jsdom = require("jsdom");
-const dom = new jsdom.JSDOM("");
-const jquery = require("jquery")(dom.window);
-const fs = require("fs");
-const express = require("express");
-const bodyParser = require("body-parser");
-const flash = require("connect-flash");
-const { resourceUsage } = require("process");
-const expressSession = require("express-session");
-const MemoryStore = require("memorystore")(expressSession);
-const fileUpload = require("express-fileupload");
-const helmet = require("helmet");
-const app = new express();
-const dotenv = require("dotenv").config();
-const cookieParser = require("cookie-parser");
-const uuid = require("uuid");
-//const sequelize = require("sequelize");
-//const db = require('./models');
-//const userRoutes = require('./routes/userRoutes.js/index.js')
+import jquery from 'jquery';
+const {jQuery} = jquery;
+import fs from 'fs';
+import express from 'express';
+import bodyParser from 'body-parser';
+import flash from 'connect-flash';
+import expressSession from 'express-session';
+import { MemoryStore } from 'express-session';
+import fileUpload from 'express-fileupload';
+import helmet from 'helmet';
+import { v4 as uuid } from 'uuid';
+import cookieParser from 'cookie-parser'; 
+import homeController from './controllers/home.js';
+import courseController from './controllers/course.js';
+import contactsController from './controllers/contacts.js';
+import videosController from './controllers/videos.js';
+import teetimesController from './controllers/tee-times.js';
+import firstHalfController from './controllers/first-half.js';
+import secondHalfController from './controllers/second-half.js';
+import overallController from './controllers/overall.js';
+import availabilityController from './controllers/availability.js';
+import loginController from './controllers/login.js';
+import resultsController from './controllers/results.js';
+import newUserController from './controllers/newUser.js';
+import redirectIfAuthenticatedMiddleware from './middleware/redirectIfAuthenticatedMiddleware.js';
+//import logoutController from './controllers/logout.js';
+//import storeUserController from './controllers/storeUser.js';
+//import { configDotenv } from 'dotenv';
 
-const homeController = require("./controllers/home.js");
-const courseController = require("./controllers/course.js");
-const imagesController = require("./controllers/images.js");
-const contactsController = require("./controllers/contacts.js");
-const videosController = require("./controllers/videos.js");
-const teetimesController = require("./controllers/tee-times.js");
-const secondHalfController = require("./controllers/second-half.js");
-const firstHalfController = require("./controllers/first-half.js");
-const overallController = require("./controllers/overall.js");
-const availabilityController = require("./controllers/availability.js");
-const loginController = require("./controllers/login.js");
-const resultsController = require("./controllers/results.js");
-//const logoutController = require("./controllers/logout.js");
-const newUserController = require("./controllers/newUser");
-//const storeUserController = require("./controllers/storeUser");
-const redirectIfAuthenticatedMiddleware = require("./middleware/redirectIfAuthenticatedMiddleware");
-const { UUIDV4 } = require("sequelize");
+const app = new express();
 
 app.disable("x-powered-by");
 
@@ -52,19 +45,10 @@ app.use(
     },
   })
 );
-
 app.use(express.static("public"));
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
-
-//db.sequelize.sync({force: true}).then(() => {
-//  console.log("db has been resync'd")
-//});
-
-//app.use('/api/users', userRoutes);
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(fileUpload());
@@ -78,7 +62,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     genid: (req) => {
-      return uuid.v4();
+      return uuid;
     }
   })
 );

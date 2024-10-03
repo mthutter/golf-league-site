@@ -1,10 +1,7 @@
-/** @format */
+import { v4 as uuid } from 'uuid';
 
-const path = require("path");
-const uuid = require("uuid");
-
-module.exports = async (req, res) => {
-  const endpointId = uuid.v4();
+export default async (req, res) => {
+  const endpointId = uuid;
   req.session.endpointId = endpointId;
   res.render("index");
   console.log(req.session);

@@ -1,8 +1,4 @@
-const bcrpt = require("bcrypt");
-
-const User = require("../models/database");
-
-module.exports = (req, res) => {
+export default (req, res) => {
   const { username, password } = req.body;
 
   User.findOne({ username: username }, (error, user) => {
