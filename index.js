@@ -1,6 +1,6 @@
 /** @format */
-import jquery from 'jquery';
-const {jQuery} = jquery;
+import jQuery from 'jquery';
+import mongoose from 'mongoose';
 import fs from 'fs';
 import express from 'express';
 import bodyParser from 'body-parser';
@@ -10,6 +10,7 @@ import { MemoryStore } from 'express-session';
 import fileUpload from 'express-fileupload';
 import helmet from 'helmet';
 import { v4 as uuid } from 'uuid';
+import { MongoClient } from 'mongodb';
 import cookieParser from 'cookie-parser'; 
 import homeController from './controllers/home.js';
 import courseController from './controllers/course.js';
@@ -20,15 +21,16 @@ import firstHalfController from './controllers/first-half.js';
 import secondHalfController from './controllers/second-half.js';
 import overallController from './controllers/overall.js';
 import availabilityController from './controllers/availability.js';
-import loginController from './controllers/login.js';
+import loginController from './controllers/loginController.js';
 import resultsController from './controllers/results.js';
-import newUserController from './controllers/newUser.js';
-import redirectIfAuthenticatedMiddleware from './middleware/redirectIfAuthenticatedMiddleware.js';
-//import logoutController from './controllers/logout.js';
-//import storeUserController from './controllers/storeUser.js';
-//import { configDotenv } from 'dotenv';
+import * as dbmodel from './models/dbModel.js';
 
 const app = new express();
+
+const uri = "mongodb+srv://golfUser:LJbTwTYnKJZmgIqM@cluster0.ovmegqj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const client = new MongoClient(uri);
+
+dbmodel.connect(client);
 
 app.disable("x-powered-by");
 
@@ -62,7 +64,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     genid: (req) => {
-      return uuid;
+      return uuid();
     }
   })
 );
@@ -96,14 +98,7 @@ app.get("/second-half", secondHalfController);
 app.get("/first-half", firstHalfController);
 app.get("/overall", overallController);
 app.get("/availability", availabilityController);
-app.get("/auth/register", newUserController);
 app.get("/login", loginController);
-//app.get("/logout", logoutController);
-app.get("/auth/register", redirectIfAuthenticatedMiddleware, newUserController);
-
-//app.post("/users/register", function () {
-//  redirectIfAuthenticatedMiddleware, storeUserController;
-//});
 
 let port = process.env.PORT || 4000;
 
