@@ -8,7 +8,9 @@ export async function connect(client) {
   }
 }
 
-export function login() {}
+export function userLogin(username, password) {
+    console.log(username, password);
+};
 
 export function logout() {}
 
