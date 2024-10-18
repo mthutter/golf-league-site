@@ -39,6 +39,15 @@ body {
   body {
     background-image: none !important;
   }
+  
+  .main-schedule {
+    height: 5px;
+  }
+  
+  h5 {
+    font-size: small;
+  }
+  
 }
 
 video {
