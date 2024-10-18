@@ -17,8 +17,34 @@ body {
   font-family: Poppins;
 }
 
+.main-schedule {
+  background-color: rgb(14, 122, 56);
+  color: darkgreen;
+  height: 65px;
+  width: 450px;
+  border: solid black 3px;
+  border-radius: 12px;
+}
+
+.main-thanks {
+  background-color: rgb(138, 136, 20);
+  color: darkgreen;
+  height: auto;
+  min-height: 85px;
+  width: 600px;
+  border: solid black 2px;
+  border-radius: 12px;
+}
+
 .gradient-background {
-  background: linear-gradient(79deg, #b5ec59, #2b61a2, #20f81f, #122a80, #b30e0e);
+  background: linear-gradient(
+    79deg,
+    #b5ec59,
+    #2b61a2,
+    #20f81f,
+    #122a80,
+    #b30e0e
+  );
   background-size: 400% 400%;
   animation: gradient-animation 15s ease infinite;
 }
@@ -39,15 +65,19 @@ body {
   body {
     background-image: none !important;
   }
-  
+
   .main-schedule {
-    height: 5px;
+    height: 55px;
   }
-  
+
+  .main-thanks {
+    height: auto;
+    min-height: 65px;
+  }
+
   h5 {
     font-size: small;
   }
-  
 }
 
 video {
@@ -124,25 +154,6 @@ video {
   width: 1000px;
   border: solid black 5px;
   border-radius: 15px;
-}
-
-.main-schedule {
-  background-color: rgb(14, 122, 56);
-  color: darkgreen;
-  height: 65px;
-  width: 450px;
-  border: solid black 3px;
-  border-radius: 12px;
-}
-
-.main-thanks {
-  background-color: rgb(138, 136, 20);
-  color: darkgreen;
-  height: auto;
-  min-height: 85px;
-  width: 600px;
-  border: solid black 2px;
-  border-radius: 12px;
 }
 
 .login-box {
