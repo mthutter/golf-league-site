@@ -204,7 +204,7 @@ h4 a:hover {
 .images:hover,
 video:hover {
   border: solid rgb(66, 179, 56) 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 20px;
   padding: 0.5rem;
 }
 
