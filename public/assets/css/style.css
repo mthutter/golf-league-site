@@ -20,7 +20,7 @@ body {
 .main-schedule {
   background-color: rgb(14, 122, 56);
   color: darkgreen;
-  height: 65px;
+  height: 100px;
   width: 450px;
   border: solid black 3px;
   border-radius: 12px;
