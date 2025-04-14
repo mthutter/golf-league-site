@@ -92,7 +92,7 @@ app.get("/images", async (req, res) => {
 });
 app.get("/videos", videosController);
 app.get("/results", resultsController);
-app.get("/contacts", contactsController);
+//app.get("/contacts", contactsController);
 app.get("/tee-times", teetimesController);
 app.get("/second-half", secondHalfController);
 app.get("/first-half", firstHalfController);
