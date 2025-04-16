@@ -20,7 +20,7 @@ body {
 .main-schedule {
   background-color: rgb(30, 188, 90);
   color: darkgreen;
-  height: 200px;
+  height: 230px;
   width: 450px;
   border: solid black 3px;
   border-radius: 12px;
@@ -184,7 +184,7 @@ td a {
 }
 
 a {
-  color: darkcyan;
+  color: rgb(212, 47, 29);
   text-decoration: none;
 }
 
