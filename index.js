@@ -69,26 +69,45 @@ app.use(
   })
 );
 
-const directoryPath = "public/images/2024";
-const imageFiles = [];
-var index = 0;
+const directoryPath2024 = "public/images/2024";
+const imageFiles2024 = [];
+var index2024 = 0;
 
-fs.readdir(directoryPath, (err, files) => {
+fs.readdir(directoryPath2024, (err, files) => {
   if (err) {
     console.error("Error reading directory:", err);
     return;
   }
   files.forEach((file) => {
     console.log(file);
-    imageFiles[index] = file;
-    index++;
+    imageFiles2024[index2024] = file;
+    index2024++;
+  });
+});
+
+const directoryPath2025 = "public/images/2025";
+const imageFiles2025 = [];
+var index2025 = 0;
+
+fs.readdir(directoryPath2025, (err, files) => {
+  if (err) {
+    console.error("Error reading directory:", err);
+    return;
+  }
+  files.forEach((file) => {
+    console.log(file);
+    imageFiles2025[index2025] = file;
+    index2025++;
   });
 });
 
 app.get("/", homeController);
 app.get("/course", courseController);
-app.get("/images", async (req, res) => {  
-  res.render("images2024", { items: imageFiles });
+app.get("/images2024", async (req, res) => {  
+  res.render("images2024", { items: imageFiles2024 });
+});
+app.get("/images2025", async (req, res) => {  
+  res.render("images2025", { items: imageFiles2025 });
 });
 app.get("/videos", videosController);
 app.get("/results", resultsController);
