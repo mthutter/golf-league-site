@@ -69,7 +69,7 @@ app.use(
   })
 );
 
-const directoryPath = "public/images";
+const directoryPath = "public/images/2024";
 const imageFiles = [];
 var index = 0;
 
@@ -88,7 +88,7 @@ fs.readdir(directoryPath, (err, files) => {
 app.get("/", homeController);
 app.get("/course", courseController);
 app.get("/images", async (req, res) => {  
-  res.render("images", { items: imageFiles });
+  res.render("images2024", { items: imageFiles });
 });
 app.get("/videos", videosController);
 app.get("/results", resultsController);
