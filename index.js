@@ -1,33 +1,34 @@
 /** @format */
-import jQuery from 'jquery';
-import mongoose from 'mongoose';
-import fs from 'fs';
-import express from 'express';
-import bodyParser from 'body-parser';
-import flash from 'connect-flash';
-import expressSession from 'express-session';
-import { MemoryStore } from 'express-session';
-import fileUpload from 'express-fileupload';
-import helmet from 'helmet';
-import { v4 as uuid } from 'uuid';
-import { MongoClient } from 'mongodb';
-import cookieParser from 'cookie-parser'; 
-import homeController from './controllers/home.js';
-import courseController from './controllers/course.js';
+//import jQuery from "jquery";
+//import mongoose from "mongoose";
+import fs from "fs";
+import express from "express";
+import bodyParser from "body-parser";
+import flash from "connect-flash";
+import expressSession from "express-session";
+import { MemoryStore } from "express-session";
+import fileUpload from "express-fileupload";
+import helmet from "helmet";
+import { v4 as uuid } from "uuid";
+import { MongoClient } from "mongodb";
+import cookieParser from "cookie-parser";
+import homeController from "./controllers/home.js";
+import courseController from "./controllers/course.js";
 //import contactsController from './controllers/contacts.js';
-import videosController from './controllers/videos.js';
-import teetimesController from './controllers/tee-times.js';
-import firstHalfController from './controllers/first-half.js';
-import secondHalfController from './controllers/second-half.js';
-import overallController from './controllers/overall.js';
-import availabilityController from './controllers/availability.js';
-import loginController from './controllers/loginController.js';
-import resultsController from './controllers/results.js';
-import * as dbmodel from './models/dbModel.js';
+import videosController from "./controllers/videos.js";
+import teetimesController from "./controllers/tee-times.js";
+import firstHalfController from "./controllers/first-half.js";
+import secondHalfController from "./controllers/second-half.js";
+import overallController from "./controllers/overall.js";
+//import availabilityController from "./controllers/availability.js";
+//import loginController from "./controllers/loginController.js";
+import resultsController from "./controllers/results.js";
+import * as dbmodel from "./models/dbModel.js";
 
 const app = new express();
 
-const uri = "mongodb+srv://golfUser:LJbTwTYnKJZmgIqM@cluster0.ovmegqj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri =
+  "mongodb+srv://golfUser:LJbTwTYnKJZmgIqM@cluster0.ovmegqj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(uri);
 
 dbmodel.connect(client);
@@ -41,9 +42,24 @@ app.use(helmet());
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      scriptSrc: ["'self' data:", "fonts.gstatic.com", "fonts.googleapis.com", "static.elfsight.com", "cdn.jsdelivr.net"],
+      scriptSrc: [
+        "'self' data:",
+        "fonts.gstatic.com",
+        "fonts.googleapis.com",
+        "static.elfsight.com",
+        "cdn.jsdelivr.net",
+      ],
       connectSrc: ["'self'", "core.service.elfsight.com", "cdn.jsdelivr.net"],
-      imgSrc: ["'self' data:", "'self'", "fonts.gstatic.com", "fonts.googleapis.com", "cdn.jsdelivr.net/npm/bootstrap@5.3.3", "static.elfsight.com", "files.elfsightcdn.com", "www.w3.org"],
+      imgSrc: [
+        "'self' data:",
+        "'self'",
+        "fonts.gstatic.com",
+        "fonts.googleapis.com",
+        "cdn.jsdelivr.net/npm/bootstrap@5.3.3",
+        "static.elfsight.com",
+        "files.elfsightcdn.com",
+        "www.w3.org",
+      ],
     },
   })
 );
@@ -57,7 +73,7 @@ app.use(fileUpload());
 app.use(flash());
 app.use(
   expressSession({
-    name: 'SessionCookie',
+    name: "SessionCookie",
     cookie: { maxAge: 60000 },
     secret: "woot",
     store: new MemoryStore({ checkPeriod: 86400000 }),
@@ -65,7 +81,7 @@ app.use(
     saveUninitialized: false,
     genid: (req) => {
       return uuid();
-    }
+    },
   })
 );
 
@@ -103,10 +119,10 @@ fs.readdir(directoryPath2025, (err, files) => {
 
 app.get("/", homeController);
 app.get("/course", courseController);
-app.get("/images2024", async (req, res) => {  
+app.get("/images2024", async (req, res) => {
   res.render("images2024", { items: imageFiles2024 });
 });
-app.get("/images2025", async (req, res) => {  
+app.get("/images2025", async (req, res) => {
   res.render("images2025", { items: imageFiles2025 });
 });
 app.get("/videos", videosController);
