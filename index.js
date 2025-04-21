@@ -116,8 +116,8 @@ app.get("/tee-times", teetimesController);
 app.get("/second-half", secondHalfController);
 app.get("/first-half", firstHalfController);
 app.get("/overall", overallController);
-app.get("/availability", availabilityController);
-app.get("/login", loginController);
+//app.get("/availability", availabilityController);
+//app.get("/login", loginController);
 
 let port = process.env.PORT || 4000;
 
