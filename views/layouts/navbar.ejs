@@ -31,60 +31,39 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
-        <li class="px-3 nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-        <!-- <li class="px-3 nav-item">
-                    <a class="nav-link active" aria-current="page" href="/login">Login</a>
-                </li> -->
-        <li class="px-3 nav-item">
-          <a class="nav-link active" aria-current="page" href="/tee-times"
-            >Tee Times</a
-          >
+        <li>
+          <a class="px-3 nav-link active" aria-current="page" href="/">Home</a>
+        </li>        
+        <li>
+          <a class="px-3 nav-link active" aria-current="page" href="/tee-times">Tee Times</a>
         </li>
 
-        <li class="px-3 dropdown">
-          <a
-            class="nav-link active dropdown-toggle"
-            role="button"
+        <li class="dropdown"><a class="px-3 nav-link active dropdown-toggle text-center" role="button"
             href="/"
             data-bs-toggle="dropdown"
-            aria-expanded="true"
-            >Standings</a
-          >
+            aria-expanded="true">Standings</a>
           <ul
-            style="
-              background-color: rgb(88, 199, 61);
-              border: solid rgb(3, 102, 3) 5px;
-              border-radius: 10px;
-            "
-            class="dropdown-menu"
-          >
+            style="background-color: rgb(88, 199, 61); border: solid rgb(3, 102, 3) 5px; border-radius: 10px;"
+            class="dropdown-menu">
             <li>
               <a class="px-3 nav-link dropdown-item" href="/overall">Overall</a>
             </li>
             <li>
-              <a class="px-3 nav-link dropdown-item" href="/first-half"
-                >First Half</a
-              >
+              <a class="px-3 nav-link dropdown-item" href="/first-half">First Half</a>
             </li>
             <li>
-              <a class="px-3 nav-link dropdown-item" href="/second-half"
-                >Second Half</a
-              >
+              <a class="px-3 nav-link dropdown-item" href="/second-half">Second Half</a>
             </li>
           </ul>
         </li>
 
-        <li class="px-3 nav-item">
-          <a class="nav-link active" aria-current="page" href="/results"
-            >Weekly Results</a
-          >
+        <li>
+          <a class="px-3 nav-link active" aria-current="page" href="/results">Weekly Results</a>
         </li>
 
-        <li class="px-3 dropdown">
+        <li class="dropdown">
           <a
-            class="nav-link active dropdown-toggle"
+            class="px-3 nav-link active dropdown-toggle"
             aria-current="page"
             role="button"
             href="/"
@@ -107,17 +86,40 @@
               <a class="px-3 nav-link dropdown-item" href="/images2025">2025</a>
             </li>
           </ul>
-        </li>
-        <!-- <li class="px-3 nav-item">
-                    <a class="nav-link active" aria-current="page" href="/images">Images</a>
-                </li> -->
-        <li class="px-3 nav-item">
-          <a class="nav-link active" aria-current="page" href="/videos"
+        <!-- <li>       
+          <a class="px-3 nav-link active" aria-current="page" href="/videos">Videos</a>
+        </li> -->
+        <li class="dropdown">
+          <a
+            class="px-3 nav-link active dropdown-toggle"
+            aria-current="page"
+            role="button"
+            href="/"
+            data-bs-toggle="dropdown"
+            aria-expanded="true"
             >Videos</a
           >
+          <ul
+            style="
+              background-color: rgb(88, 199, 61);
+              border: solid rgb(3, 102, 3) 5px;
+              border-radius: 10px;
+            "
+            class="dropdown-menu"
+          >
+            <li>
+              <a class="px-3 nav-link dropdown-item" href="/videos2024">2024</a>
+            </li>
+            <li>
+              <a class="px-3 nav-link dropdown-item" href="/videos2025">2025</a>
+            </li>
+          </ul>
+        <li>  
+        <li>
+          <a class="px-3 nav-link active" href="/course">Course</a>
         </li>
         <li>
-          <a class="px-3 nav-link dropdown-item" href="/course">Course</a>
+          <a class="px-3 nav-link" href="/historical">Historical</a>
         </li>
       </ul>
     </div>

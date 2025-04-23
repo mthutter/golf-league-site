@@ -75,7 +75,8 @@ body {
     min-height: 65px;
   }
 
-  h5, p {
+  h5,
+  p {
     font-size: small !important;
   }
 }

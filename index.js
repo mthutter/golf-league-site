@@ -15,7 +15,8 @@ import cookieParser from "cookie-parser";
 import homeController from "./controllers/home.js";
 import courseController from "./controllers/course.js";
 //import contactsController from './controllers/contacts.js';
-import videosController from "./controllers/videos.js";
+import videos2024Controller from "./controllers/videos2024.js";
+import videos2025Controller from "./controllers/videos2025.js";
 import teetimesController from "./controllers/tee-times.js";
 import firstHalfController from "./controllers/first-half.js";
 import secondHalfController from "./controllers/second-half.js";
@@ -125,7 +126,9 @@ app.get("/images2024", async (req, res) => {
 app.get("/images2025", async (req, res) => {
   res.render("images2025", { items: imageFiles2025 });
 });
-app.get("/videos", videosController);
+app.get("/videos2024", videos2024Controller);
+app.get("/videos2025", videos2025Controller);
+
 app.get("/results", resultsController);
 //app.get("/contacts", contactsController);
 app.get("/tee-times", teetimesController);
