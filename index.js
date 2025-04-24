@@ -28,11 +28,11 @@ import * as dbmodel from "./models/dbModel.js";
 
 const app = new express();
 
-const uri =
-  "mongodb+srv://golfUser:LJbTwTYnKJZmgIqM@cluster0.ovmegqj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-const client = new MongoClient(uri);
+//const uri =
+//  "mongodb+srv://golfUser:LJbTwTYnKJZmgIqM@cluster0.ovmegqj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+//const client = new MongoClient(uri);
 
-dbmodel.connect(client);
+//dbmodel.connect(client);
 
 app.disable("x-powered-by");
 
