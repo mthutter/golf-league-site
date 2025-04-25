@@ -67,7 +67,7 @@ body {
   }
 
   .main-schedule {
-    height: 300px;
+    max-height: 250px;
   }
 
   .main-thanks {
