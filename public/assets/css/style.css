@@ -115,6 +115,23 @@ body {
   }
 }
 
+@media only screen and (max-width: 414px) and (orientation: landscape) {
+  body {
+    background-image: none !important;
+  }
+  .main-schedule {
+   max-height: 200px;
+  }
+  .main-thanks {
+    height: auto;
+    min-height: 65px;
+  }
+  h5,
+  p,
+  a {
+    font-size: small !important;
+  }
+}
 
 
 video {
