@@ -1,1 +1,1 @@
-console.log(req.session);
+console.log(req.session.id);

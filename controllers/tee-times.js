@@ -1,4 +1,4 @@
 export default async (req, res) => {
   res.render("tee-times");
-  console.log(req.sessionID);
+  console.table(req.sessionID);
 };
