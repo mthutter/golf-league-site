@@ -61,7 +61,7 @@ body {
   }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 400px) {
   body {
     background-image: none !important;
   }
@@ -81,7 +81,7 @@ body {
     font-size: medium !important;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
   body {
     background-image: none !important;
   }
