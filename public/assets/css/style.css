@@ -9,8 +9,7 @@ html {
 body {
   width: 100%;
   margin: 0;
-  height: 100vh;
-  /** background-image: url(/images/golf-hole-2.jpg); */
+  height: 100vh;  
   background-color: rgb(47, 138, 47);
   background-position: center;
   background-size: 80% 80%;
@@ -75,8 +74,7 @@ body {
     min-height: 65px;
   }
 
-  h5,
-  p {
+  h5, p, a {
     font-size: small !important;
   }
 }
