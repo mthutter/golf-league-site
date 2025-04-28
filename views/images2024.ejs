@@ -32,7 +32,7 @@
       <%- include('./layouts/navbar'); %>
     </section>
 
-    <section id="images">      
+    <section>      
       <div>
         <br><br>
         <h1 style="text-align: center;">2024 Images</h1>
@@ -40,12 +40,12 @@
       </div>
       <br>
       <div class="container">
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center">
           <% items.forEach((item)=> { %>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 col-4 my-2 images">
+            <div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 my-2" style="padding: 10px">
               <a id="holder" href="/images/2024/<%= item %>"><img alt="<%= item%>" loading="lazy"
                   src="/images/2024/<%= item %>"
-                  class="img-fluid clearfix justify-content-center align-items-center">
+                  class="img-fluid">
               </a>
             </div>
             <% }) %>            
@@ -56,12 +56,6 @@
     <section>
       <div>
         <%- include('./layouts/footer'); %>
-      </div>
-    </section>
-
-    <section>
-      <div>
-        <%- include('./layouts/scripts'); %>
       </div>
     </section>    
   </body>
