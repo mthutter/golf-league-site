@@ -17,10 +17,14 @@
       -webkit-transition: all 0.2s ease;
       -moz-transition: all 0.2s ease;
       transition: all 0.5s ease;
+      border: solid black 3px;
+      border-radius: 5px;
      }
 
     #holder img:hover {
       transform: scale(2,2);
+      border: solid rgb(66, 179, 56) 0.25rem;
+      border-radius: 5px;        
     }
   </style>
 
@@ -44,7 +48,7 @@
           <% items.forEach((item)=> { %>
             <div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 col-4 my-2 images">
               <a id="holder" href="/images/2024/<%= item %>"><img alt="<%= item%>" loading="lazy"
-                  style="border-radius: 15px; border: solid rgb(40, 54, 13) 3px;" src="/images/2024/<%= item %>"
+                  src="/images/2024/<%= item %>"
                   class="img-fluid clearfix justify-content-center align-items-center">
               </a>
             </div>

@@ -13,8 +13,7 @@ body {
   background-color: rgb(47, 138, 47);
   background-position: center;
   background-size: 80% 80%;
-  font-family: Arial, Helvetica, sans-serif;
-  /* font-family: Poppins; */
+  font-family: Arial, Helvetica, sans-serif; 
 }
 
 .main-schedule {
@@ -36,46 +35,19 @@ body {
   border-radius: 12px;
 }
 
-.gradient-background {
-  background: linear-gradient(
-    79deg,
-    #b5ec59,
-    #2b61a2,
-    #20f81f,
-    #122a80,
-    #b30e0e
-  );
-  background-size: 400% 400%;
-  animation: gradient-animation 15s ease infinite;
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 @media only screen and (min-width: 414px){
   body {
     background-image: none !important;
   }
   .main-schedule {
-    max-height: 200px;
+    max-height: 225px;
   }
   .main-thanks {
     height: auto;
     min-height: 65px;
   }
-  h5,
-  p,
-  a {
-    font-size: medium !important;
+  h5, p {
+    font-size: large !important;
   }
 }
 
@@ -91,9 +63,8 @@ body {
     min-height: 65px;
   }
   h5,
-  p,
-  a {
-    font-size: medium !important;
+  p {
+    font-size: large !important;
   }
 }
 
@@ -108,10 +79,8 @@ body {
     height: auto;
     min-height: 65px;
   }
-  h5,
-  p,
-  a {
-    font-size: small !important;
+  h5, p {
+    font-size: large !important;
   }
 }
 
@@ -127,12 +96,10 @@ body {
     min-height: 65px;
   }
   h5,
-  p,
-  a {
-    font-size: small !important;
+  p {
+    font-size: large !important;
   }
 }
-
 
 video {
   width: 300px;
@@ -173,25 +140,6 @@ video {
   border-radius: 5%;
 }
 
-.main-rules {
-  background-color: rgb(14, 122, 56);
-  color: darkgreen;
-  border: solid black 2px;
-  font-weight: bold;
-}
-
-.form-signin {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.form-control {
-  width: 350px;
-}
-
 .file-list {
   background-color: rgb(14, 122, 56);
   color: darkgreen;
@@ -210,20 +158,6 @@ video {
   border-radius: 15px;
 }
 
-.login-box {
-  background-color: rgb(14, 122, 56);
-  color: darkgreen;
-  height: 185px;
-  border: solid black 5px;
-  border-radius: 15px;
-  margin-top: 10px;
-  padding-top: 15px;
-}
-
-.course {
-  color: black;
-}
-
 footer {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   position: fixed;
@@ -240,26 +174,12 @@ td a {
 a {
   color: rgb(212, 47, 29);
   text-decoration: none;
+
 }
 
-li:hover,
-.dropdown-item:hover,
-.results a:hover,
-h4 a:hover {
-  background-color: rgb(43, 167, 31);
-  border-radius: 8px;
-}
-
-/*li:visited, .dropdown-item:visited, .results a:visited, h4 a:visited{
-  background-color: rgb(182, 42, 124);
-  border-radius: 8px;  
-} */
-
-.video:hover {
-  border: solid rgb(66, 179, 56) 0.5rem;
-  border-radius: 20px;
-  padding: 0.5rem;
-}
+video:hover, img:hover {
+  border: solid rgb(66, 179, 56) 0.25rem;
+}  
 
 p {
   color: black;
@@ -281,8 +201,7 @@ h4 {
   color: black;
 }
 
-h5,
-h6 {
+h5, h6 {
   color: cyan;
 }
 
@@ -301,9 +220,6 @@ td {
   white-space: nowrap;
   padding-left: 5px;
   padding-right: 5px;
-}
-.table-9-12 {
-  color: brown;
 }
 
 ul {
