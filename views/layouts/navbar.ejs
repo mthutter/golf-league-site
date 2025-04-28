@@ -1,3 +1,20 @@
+<head>
+  <style>
+    a:hover {
+      background-color: rgb(89, 195, 62);
+    }
+
+    li a:hover {
+      background-color: rgb(89, 195, 62);
+    }
+
+    .drop-hover:hover {
+      background-color: rgb(67, 150, 44);
+      border: solid rgb(3, 102, 3) 2px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
 <div
   class="position-absolute top-0 end-0"
   style="
@@ -16,6 +33,7 @@
     <a
       class="navbar-brand"
       style="padding-left: 4px; padding-right: 4px; width: auto"
+      href="/"
       >Bottoms Up Golf</a
     >
     <button
@@ -58,20 +76,26 @@
             style="
               background-color: rgb(88, 199, 61);
               border: solid rgb(3, 102, 3) 5px;
-              border-radius: 10px;
+              border-radius: 5px;
             "
             class="dropdown-menu"
           >
             <li>
-              <a class="px-3 nav-link dropdown-item" href="/overall">Overall</a>
+              <a class="px-3 drop-hover nav-link dropdown-item" href="/overall"
+                >Overall</a
+              >
             </li>
             <li>
-              <a class="px-3 nav-link dropdown-item" href="/first-half"
+              <a
+                class="px-3 drop-hover nav-link dropdown-item"
+                href="/first-half"
                 >First Half</a
               >
             </li>
             <li>
-              <a class="px-3 nav-link dropdown-item" href="/second-half"
+              <a
+                class="px-3 drop-hover nav-link dropdown-item"
+                href="/second-half"
                 >Second Half</a
               >
             </li>
@@ -92,15 +116,23 @@
             style="
               background-color: rgb(88, 199, 61);
               border: solid rgb(3, 102, 3) 5px;
-              border-radius: 10px;
+              border-radius: 5px;
             "
             class="dropdown-menu"
           >
             <li>
-              <a class="px-3 nav-link dropdown-item" href="/images2024">2024</a>
+              <a
+                class="px-3 drop-hover nav-link dropdown-item"
+                href="/images2024"
+                >2024</a
+              >
             </li>
             <li>
-              <a class="px-3 nav-link dropdown-item" href="/images2025">2025</a>
+              <a
+                class="px-3 drop-hover nav-link dropdown-item"
+                href="/images2025"
+                >2025</a
+              >
             </li>
           </ul>
           <!-- <li>       
@@ -122,15 +154,23 @@
             style="
               background-color: rgb(88, 199, 61);
               border: solid rgb(3, 102, 3) 5px;
-              border-radius: 10px;
+              border-radius: 5px;
             "
             class="dropdown-menu"
           >
             <li>
-              <a class="px-3 nav-link dropdown-item" href="/videos2024">2024</a>
+              <a
+                class="px-3 drop-hover nav-link dropdown-item"
+                href="/videos2024"
+                >2024</a
+              >
             </li>
             <li>
-              <a class="px-3 nav-link dropdown-item" href="/videos2025">2025</a>
+              <a
+                class="px-3 drop-hover nav-link dropdown-item"
+                href="/videos2025"
+                >2025</a
+              >
             </li>
           </ul>
         </li>
@@ -140,7 +180,7 @@
           <a class="px-3 nav-link active" href="/course">Course</a>
         </li>
         <li>
-          <a class="px-3 nav-link" href="/historical">Historical</a>
+          <a class="px-3 nav-link active" href="/historical">Historical</a>
         </li>
       </ul>
     </div>
