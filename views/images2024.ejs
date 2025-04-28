@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
-<%- include('./layouts/header'); -%>
+<%- include('./layouts/header'); %>
 
   <style>
     #holder {
@@ -22,21 +22,17 @@
      }
 
     #holder img:hover {
-      transform: scale(2,2);
-      border: solid rgb(66, 179, 56) 0.25rem;
-      border-radius: 5px;        
+      transform: scale(2,2);          
     }
   </style>
 
   <body>
 
     <section>
-      <%- include('./layouts/navbar'); -%>
+      <%- include('./layouts/navbar'); %>
     </section>
 
-    <section id="images">
-      <!--<div style="border-radius: 10%;" class="elfsight-app-550a1f27-8160-46fa-b254-1050f8b9f4eb" data-elfsight-app-lazy>
-      </div> -->
+    <section id="images">      
       <div>
         <br><br>
         <h1 style="text-align: center;">2024 Images</h1>
@@ -52,34 +48,21 @@
                   class="img-fluid clearfix justify-content-center align-items-center">
               </a>
             </div>
-            <% })  %>
-            
+            <% }) %>            
         </div>
-      </div>
-      </div>
+      </div>      
     </section>
-
-
 
     <section>
       <div>
-        <%- include('./layouts/footer'); -%>
+        <%- include('./layouts/footer'); %>
       </div>
     </section>
 
     <section>
       <div>
-        <%- include('./layouts/scripts'); -%>
+        <%- include('./layouts/scripts'); %>
       </div>
-    </section>
-
-    <!-- <script>
-      $(document).on('click', '[data-toggle="lightbox"]', function (event) {
-        event.preventDefault();
-        $(this).ekkoLightbox();
-      });
-    </script>-->
-
+    </section>    
   </body>
-
 </html>

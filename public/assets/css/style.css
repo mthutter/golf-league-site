@@ -130,8 +130,8 @@ video {
 
 .main-small {
   max-height: 400px;
-  border: solid rgb(40, 54, 13) 3px;
-  border-radius: 10%;
+  border: solid rgb(40, 54, 13) .25rem;
+  border-radius: 10px;
 }
 
 .main-large {
