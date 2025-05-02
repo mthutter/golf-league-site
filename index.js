@@ -18,6 +18,9 @@ import courseController from "./controllers/course.js";
 import videos2024Controller from "./controllers/videos2024.js";
 import videos2025Controller from "./controllers/videos2025.js";
 import teetimesController from "./controllers/tee-times.js";
+import { showForm } from "./controllers/formController.js";
+import { submitForm } from "./controllers/formController.js";
+
 import firstHalfController from "./controllers/first-half.js";
 import secondHalfController from "./controllers/second-half.js";
 import overallController from "./controllers/overall.js";
@@ -135,6 +138,8 @@ app.get("/tee-times", teetimesController);
 app.get("/second-half", secondHalfController);
 app.get("/first-half", firstHalfController);
 app.get("/overall", overallController);
+app.get("/form", showForm);
+app.post("/submit", submitForm);
 //app.get("/availability", availabilityController);
 //app.get("/login", loginController);
 
